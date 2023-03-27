@@ -11,11 +11,10 @@ function Book(author, title) {
 const btnAdd = document.getElementById(add);
   btnAdd.addEventListener('click',() => {
     Book.AddBook();
-  })
+  });
 
 Book.AddBook() {  
-
-  
+    const txtAuthor = document.getElementById()
 }
 
 
