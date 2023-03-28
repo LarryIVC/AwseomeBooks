@@ -117,6 +117,12 @@ Example command:
 - Linkedin: [abiola-arobieke](https://linkedin.com/in/abiola-arobieke)
 - Twitter: [@abiola_arobieke](https://twitter.com/abiola_arobieke)
 
+👤 **Naan Mohammed**
+
+- GitHub: [@naanmohammed](https://github.com/naanmohammed)
+- Linkedin: [abiola-arobieke](https://linkedin.com/in/naanahmed)
+- Twitter: [@abiola_arobieke](https://twitter.com/_naanahmed)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
