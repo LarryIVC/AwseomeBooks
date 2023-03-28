@@ -1,9 +1,8 @@
-
 const ListBooks = document.getElementById('book-container');
 const formAdd = document.getElementById('frmAdd');
 
 function getBooks() {
-  const arrBook = JSON.parse(localStorage.getItem('arrBook')) || []; 
+  const arrBook = JSON.parse(localStorage.getItem('arrBook')) || [];
   return arrBook;
 }
 
@@ -40,7 +39,7 @@ function showBooks() {
 showBooks();
 
 // add book function
- formAdd.addEventListener('submit', (e) => {
+formAdd.addEventListener('submit', (e) => {
   e.preventDefault();
   const arrBook = getBooks();
   const newBook = {
