@@ -1,45 +1,70 @@
-let arrBook = [];
+let arrBook = [
+  {
+    title: "Absalom",
+    author: "WILLIAM FAULKNER"
+  },
+  {
+    title: "TIME TO KILL",
+    author: "JOHN GRISHAM"
+  },
+  {
+    title: "THE HOUSE OF MIRTH",
+    author: "EDITH WHARTON"
+  },
+  {
+    title: "EAST OF EDEN",
+    author: "JOHN STEINBECK"
+  },
+];
 
-function Book(author, title) {
-  
-  this.author = author;
-  this.title = title;
-};
+const ListBooks = document.getElementById('book-container');
+// const btnAdd = document.getElementById('add');
+const formAdd = document.getElementById('frmAdd');
 
 
 
-const btnAdd = document.getElementById(add);
-  btnAdd.addEventListener('click',() => {
-    Book.AddBook();
+// Display list of books 
+function showBooks() {
+
+  let listHtml = '';
+
+  arrBook.forEach((objBook, index) => {
+    listHtml += `<div>
+    <p>Title: ${objBook.title}</p>
+    <p>Author: ${objBook.author}</p>
+    <button class = "btnRemove">Remove</button>
+    <hr></div>`;
   });
+  
+  ListBooks.innerHTML = listHtml; 
 
-Book.AddBook() {  
-    const txtAuthor = document.getElementById()
+  //  rermove book 
+  const btnRemove = document.querySelectorAll('.btnRemove');
+
+  btnRemove.forEach((btnRemoveClick, index) => {
+  btnRemoveClick.addEventListener('click', () => {
+    arrBook.splice(index,1);  
+    showBooks();  
+  });  
+});
 }
 
+showBooks();
+// add book function 
+
+formAdd.addEventListener('submit', (e) => {
+
+  e.preventDefault();
+  const newBook = {
+    title: formAdd.title.value,
+    author: formAdd.author.value
+  };
+  arrBook.push(newBook);
+  showBooks();
+  formAdd.title.value = '';
+  formAdd.author.value = '';
+});
 
 
-// const biblioteca = {
-//   libros: [],
-  
-//   agregarLibro: function(titulo, autor) {
-//     const libro = {titulo, autor};
-//     this.libros.push(libro);
-//     console.log(`${titulo} de ${autor} fue agregado a la biblioteca.`);
-//   },
-  
-//   eliminarLibro: function(titulo) {
-//     this.libros = this.libros.filter((libro) => libro.titulo !== titulo);
-//     console.log(`${titulo} fue eliminado de la biblioteca.`);
-//   }
-// };
 
-// biblioteca.agregarLibro('Cien años de soledad', 'Gabriel García Márquez');
-// biblioteca.agregarLibro('1984', 'George Orwell');
-// biblioteca.agregarLibro('La ciudad y los perros', 'Mario Vargas Llosa');
 
-// console.log(biblioteca.libros);
-
-// biblioteca.eliminarLibro('1984');
-
-// console.log(biblioteca.libros);
