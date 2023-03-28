@@ -1,5 +1,5 @@
 const ListBooks = document.getElementById('book-container');
-const formAdd = document.getElementById('frmAdd');
+const formAdd = document.getElementById('formAdd');
 
 function getBooks() {
   const arrBook = JSON.parse(localStorage.getItem('arrBook')) || [];
@@ -23,10 +23,8 @@ function showBooks() {
   });
 
   ListBooks.innerHTML = listHtml;
-
-  //  rermove book
+  //  remove book
   const btnRemove = document.querySelectorAll('.btnRemove');
-
   btnRemove.forEach((btnRemoveClick, index) => {
     btnRemoveClick.addEventListener('click', () => {
       arrBook.splice(index, 1);
@@ -37,7 +35,6 @@ function showBooks() {
 }
 
 showBooks();
-
 // add book function
 formAdd.addEventListener('submit', (e) => {
   e.preventDefault();
