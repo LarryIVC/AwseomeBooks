@@ -1,28 +1,9 @@
-// let arrBook = [
-//   {
-//     title: "Absalom",
-//     author: "WILLIAM FAULKNER"
-//   },
-//   {
-//     title: "TIME TO KILL",
-//     author: "JOHN GRISHAM"
-//   },
-//   {
-//     title: "THE HOUSE OF MIRTH",
-//     author: "EDITH WHARTON"
-//   },
-//   {
-//     title: "EAST OF EDEN",
-//     author: "JOHN STEINBECK"
-//   },
-// ];
 
 const ListBooks = document.getElementById('book-container');
-// const btnAdd = document.getElementById('add');
 const formAdd = document.getElementById('frmAdd');
 
 function getBooks() {
-  const arrBook = JSON.parse(localStorage.getItem('arrBook')) || []; // Si no hay datos en el localStorage, devolvemos un array vacío
+  const arrBook = JSON.parse(localStorage.getItem('arrBook')) || []; 
   return arrBook;
 }
 
@@ -57,9 +38,9 @@ function showBooks() {
 }
 
 showBooks();
-// add book function
 
-formAdd.addEventListener('submit', (e) => {
+// add book function
+ formAdd.addEventListener('submit', (e) => {
   e.preventDefault();
   const arrBook = getBooks();
   const newBook = {
