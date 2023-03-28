@@ -1,8 +1,62 @@
-* {
-  margin: 0;
+.book-list-container {
+  width: 100%;
   padding: 0;
 }
 
-body {
+.book-list-container h1{
+  text-align: center;
+}
+#book-list {
+  border: black 4px solid;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  padding: 0rem 0.5rem;
+}
+ul li:nth-of-type(odd) {
+ background-color: lightgray;
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+#remove-button {
+  float: right;
+  color: black;
   background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  border: 4px solid black;
+}
+
+#add-book-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#add-book-form h2 {
+  margin-bottom: 0;
+}
+
+input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 3px solid black;
+  min-width: 300px;
+}
+
+#add-button {
+  margin: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border: 4px solid black;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  margin-left: 17.8125rem;
 }
