@@ -3,9 +3,10 @@
   padding: 0;
 }
 
-.book-list-container h1{
+.book-list-container h1 {
   text-align: center;
 }
+
 #book-list {
   border: black 4px solid;
   padding: 0;
@@ -16,10 +17,11 @@ ul {
 }
 
 ul li {
-  padding: 0rem 0.5rem;
+  padding: 0 0.5rem;
 }
+
 ul li:nth-of-type(odd) {
- background-color: lightgray;
+  background-color: lightgray;
 }
 
 hr {
