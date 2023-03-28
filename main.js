@@ -1,12 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable max-classes-per-file */
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
-
 class BookList {
   constructor(bookListElement, addBookFormElement, titleInputElement, authorInput) {
     this.bookListElement = bookListElement;
@@ -22,7 +13,10 @@ class BookList {
   loadBooks() {
     const storedBooks = JSON.parse(localStorage.getItem('books'));
     if (storedBooks) {
-      this.books = storedBooks.map(((book) => new Book(book.title, book.author)));
+      this.books = storedBooks.map((book) => ({
+        title: book.title,
+        author: book.author,
+      }));
     }
   }
 
@@ -30,7 +24,7 @@ class BookList {
     event.preventDefault();
     const title = this.titleInputElement.value;
     const author = this.authorInput.value;
-    const book = new Book(title, author);
+    const book = { title, author };
     this.books.push(book);
     this.titleInputElement.value = '';
     this.authorInput.value = '';
@@ -38,13 +32,13 @@ class BookList {
   }
 
   removeBook(title) {
-    this.books = this.books.filter(((book) => book.title !== title));
+    this.books = this.books.filter((book) => book.title !== title);
     this.updateBookList();
   }
 
   updateBookList() {
     this.bookListElement.innerHTML = '';
-    this.books.forEach(((book) => {
+    this.books.forEach((book) => {
       const listItem = document.createElement('li');
       listItem.innerHTML = `<strong>${book.title}</strong> by ${book.author}`;
       const removeButton = document.createElement('button');
@@ -57,7 +51,7 @@ class BookList {
       listItem.appendChild(removeButton);
       listItem.appendChild(breakline);
       this.bookListElement.appendChild(listItem);
-    }));
+    });
     localStorage.setItem('books', JSON.stringify(this.books));
   }
 }
@@ -68,6 +62,4 @@ const titleInputElement = document.getElementById('title-input');
 const authorInput = document.getElementById('author-input');
 
 const bookList = new BookList(bookListElement, addBookFormElement, titleInputElement, authorInput);
-
-/* eslint-disable no-unused-vars */
-/* eslint-disable max-classes-per-file */
+bookList.loadBooks();
