@@ -119,6 +119,17 @@ Example command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 👥 Future Features <a name="future-features"></a>
+
+We propose to implement:
+
+- Manage books collection (plain JS with classes) and add basic CSS.
+- Create a complete website with navigation.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
