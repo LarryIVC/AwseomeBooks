@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">   
-  <h1><b>Awesome books :books: </b></h3>
+  <h1><b>Awesome books</b></h3>
 
 </div>
 
