@@ -54,7 +54,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Click <a href="https://larryivc.github.io/AwseomeBooks/">here</a> to live demo versión.
+The deployment link will be available soon.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
