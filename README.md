@@ -131,8 +131,7 @@ Example command:
 
 We propose to implement:
 
-- Manage books collection (plain JS with classes) and add basic CSS.
-- Create a complete website with navigation.
+- We will create more functionalities for the project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
