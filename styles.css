@@ -1,4 +1,5 @@
-#add-book, #contact-us {
+#add-book,
+#contact-us {
   display: none;
 }
 
@@ -24,16 +25,16 @@ a {
   padding: 0.25rem 0.5rem;
 }
 
-.vertical-hr{
+.vertical-hr {
   border-left: 2px solid black;
 }
 
-date {
+#date-time {
   float: right;
   margin-top: 5px;
 }
 
-#all-books h1{
+#all-books h1 {
   text-align: center;
 }
 
@@ -47,11 +48,11 @@ date {
 }
 
 #all-books ul li {
-  padding: 0rem 0.5rem;
+  padding: 0 0.5rem;
 }
 
 #all-books ul li:nth-of-type(odd) {
- background-color: lightgray;
+  background-color: lightgray;
 }
 
 hr {
