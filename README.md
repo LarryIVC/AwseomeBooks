@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">   
-  <h1><b>Awesome books</b></h3>
+  <h1><b>Awesome books :books: </b></h3>
 
 </div>
 
@@ -54,7 +54,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-The deployment link will be available soon.
+  <a href="https://larryivc.github.io/AwseomeBooks/">Click Me</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,8 +131,7 @@ Example command:
 
 We propose to implement:
 
-- Manage books collection (plain JS with classes) and add basic CSS.
-- Create a complete website with navigation.
+- We will create more functionalities for the project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

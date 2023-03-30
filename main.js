@@ -63,3 +63,44 @@ const authorInput = document.getElementById('author-input');
 
 const bookList = new BookList(bookListElement, addBookFormElement, titleInputElement, authorInput);
 bookList.loadBooks();
+
+function hideSectionsOnClick() {
+  const listSection = document.getElementById('all-books');
+  const addNewSection = document.getElementById('add-book');
+  const contactSection = document.getElementById('contact-us');
+
+  document.getElementById('list-link').addEventListener('click', () => {
+    listSection.style.display = 'block';
+    addNewSection.style.display = 'none';
+    contactSection.style.display = 'none';
+  });
+
+  document.getElementById('add-link').addEventListener('click', () => {
+    listSection.style.display = 'none';
+    addNewSection.style.display = 'block';
+    contactSection.style.display = 'none';
+  });
+
+  document.getElementById('contact-link').addEventListener('click', () => {
+    listSection.style.display = 'none';
+    addNewSection.style.display = 'none';
+    contactSection.classList.add('show');
+  });
+}
+
+hideSectionsOnClick();
+
+const options = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+  hour12: true,
+};
+
+const now = new Date();
+const currentDate = now.toLocaleDateString('en-US', options);
+const DateTime = document.getElementById('date-time');
+DateTime.innerHTML = currentDate;

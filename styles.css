@@ -1,9 +1,40 @@
-.book-list-container {
-  width: 100%;
-  padding: 0;
+#add-book,
+#contact-us {
+  display: none;
 }
 
-.book-list-container h1 {
+.book-list-container {
+  border: 2px black solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  padding: 0.25rem 0.5rem;
+}
+
+.vertical-hr {
+  border-left: 2px solid black;
+}
+
+#date-time {
+  float: right;
+  margin-top: 5px;
+}
+
+#all-books h1 {
   text-align: center;
 }
 
@@ -12,15 +43,15 @@
   padding: 0;
 }
 
-ul {
+#all-books ul {
   list-style-type: none;
 }
 
-ul li {
+#all-books ul li {
   padding: 0 0.5rem;
 }
 
-ul li:nth-of-type(odd) {
+#all-books ul li:nth-of-type(odd) {
   background-color: lightgray;
 }
 
@@ -61,4 +92,16 @@ input {
   color: black;
   box-shadow: 0 0 5px rgba(0, 0, 0, 1);
   margin-left: 17.8125rem;
+}
+
+.show {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  border: 2px black solid;
+  padding-left: 20px;
 }
